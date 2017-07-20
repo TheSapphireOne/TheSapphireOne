@@ -1,0 +1,8 @@
+[{
+  	"relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+        "namespace": "android_app",
+        "package_name": "com.edge5.dominikluechinger.paymentservicecontainer",
+        "sha256_cert_fingerprints": ["A3:70:A3:E9:07:03:E5:4A:12:75:75:5B:52:DD:53:EC:42:3C:9B:D8:0A:E7:74:C0:BC:76:79:FC:5D:A0:CF:BB"]
+  	}
+}]
