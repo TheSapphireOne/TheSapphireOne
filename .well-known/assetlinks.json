@@ -1,8 +1,18 @@
 [{
-  	"relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-        "namespace": "android_app",
-        "package_name": "com.edge5.dominikluechinger.paymentservicecontainer",
-        "sha256_cert_fingerprints": ["A3:70:A3:E9:07:03:E5:4A:12:75:75:5B:52:DD:53:EC:42:3C:9B:D8:0A:E7:74:C0:BC:76:79:FC:5D:A0:CF:BB"]
-  	}
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "lu.domi.sapphire.gambly",
+    "sha256_cert_fingerprints":
+    ["BA:41:F8:CF:E3:9E:07:0D:1A:A8:FA:4F:70:EC:02:75:32:8F:3E:EA:EC:EB:F1:EE:8B:8D:FD:62:C7:91:D7:19"]
+  }
+  },
+  {
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.treeinspired.android.kompendium",
+    "sha256_cert_fingerprints":
+    ["86:71:06:DD:AE:F9:85:E9:4E:6C:13:B6:63:BA:2B:EE:D4:08:18:98:C0:11:7C:53:82:D6:4F:29:44:C6:53:54"]
+  }
 }]
