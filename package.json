@@ -1,0 +1,29 @@
+{
+  "name": "thesapphireone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheSapphireOne/TheSapphireOne.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/TheSapphireOne/TheSapphireOne/issues"
+  },
+  "homepage": "https://github.com/TheSapphireOne/TheSapphireOne#readme",
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.16.16",
+    "tailwindcss": "^3.4.19"
+  }
+}

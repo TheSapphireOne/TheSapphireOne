@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="domi.lu - Home">
+  <main class="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600">
+    <div class="container mx-auto px-4 py-16">
+      <div class="text-center text-white">
+        <h1 class="text-6xl font-bold mb-4">Welcome to domi.lu</h1>
+        <p class="text-xl mb-8">Built with Astro, Tailwind CSS, and Markdown</p>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white/10 backdrop-blur-lg rounded-lg p-6 hover:bg-white/20 transition">
+            <h2 class="text-2xl font-semibold mb-2">Fast</h2>
+            <p>Lightning-fast performance with Astro's static site generation</p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-lg rounded-lg p-6 hover:bg-white/20 transition">
+            <h2 class="text-2xl font-semibold mb-2">Modern</h2>
+            <p>Built with modern tools and best practices</p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-lg rounded-lg p-6 hover:bg-white/20 transition">
+            <h2 class="text-2xl font-semibold mb-2">Flexible</h2>
+            <p>Easy to customize and extend with Markdown content</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,27 +1,59 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Landing Page](http://startbootstrap.com/template-overviews/landing-page/)
+# domi.lu
 
-[Landing Page](http://startbootstrap.com/template-overviews/landing-page/) is a multipurpose landing page template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+Personal website built with modern web technologies.
 
-## Getting Started
+## Tech Stack
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/landing-page/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-landing-page.git`
-* Fork the repo
+- **Astro** - Static site generator
+- **Markdown** - Content management
+- **Tailwind CSS** - Styling
+- **GitHub Pages** - Hosting
+- **GitHub Actions** - CI/CD
 
-## Bugs and Issues
+## Development
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-landing-page/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/landing-page/).
+Install dependencies:
 
-## Creator
+```bash
+npm install
+```
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+Start the development server:
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+```bash
+npm run dev
+```
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+Build for production:
 
-## Copyright and License
+```bash
+npm run build
+```
 
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/gh-pages/LICENSE) license.
+Preview production build:
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+/
+├── public/          # Static assets (images, CNAME, etc.)
+├── src/
+│   ├── layouts/     # Astro layouts
+│   ├── pages/       # Site pages
+│   ├── components/  # Reusable components
+│   └── content/     # Markdown content
+├── astro.config.mjs # Astro configuration
+└── package.json
+```
+
+## Deployment
+
+The site is automatically deployed to GitHub Pages when changes are pushed to the `master` branch.
+
+## License
+
+MIT
