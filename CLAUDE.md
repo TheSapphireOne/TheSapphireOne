@@ -68,3 +68,28 @@ All pages should use `BaseLayout.astro` which provides:
 
 ### Styling
 Tailwind CSS is integrated via `@astrojs/tailwind`. Classes can be used directly in `.astro` components without additional setup.
+
+## Design System
+
+### Border Radius
+All UI elements should have rounded corners with a radius of **5 mm** (approximate CSS equivalent: `rounded-[20px]` in Tailwind or `border-radius: 20px` in plain CSS; adjust per screen density as needed).
+
+### Typography
+- **Primary font**: SN Pro — loaded from Google Fonts: https://fonts.google.com/specimen/SN+Pro
+- Apply via `@import` in global CSS or via `<link>` in `BaseLayout.astro`
+
+### Color Palette
+| Role                 | Hex       |
+|----------------------|-----------|
+| Primary              | `#006FBA` |
+| Secondary            | `#001F4E` |
+| Primary background   | `#FFFFFF` |
+| Secondary background | `#DFF3FD` |
+| Highlight            | `#00A4E4` |
+
+These should be registered as Tailwind CSS custom colors in `tailwind.config.mjs` (or equivalent) so they can be used as utility classes throughout the project.
+
+### Dark Mode
+All color choices must have a corresponding dark-mode variant. In practice:
+- Swap primary/secondary backgrounds
+- Keep primary and highlight colors; adjust contrast as needed
