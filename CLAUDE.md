@@ -75,7 +75,7 @@ Tailwind CSS is integrated via `@astrojs/tailwind`. Classes can be used directly
 All UI elements should have rounded corners with a radius of **5 mm** (approximate CSS equivalent: `rounded-[20px]` in Tailwind or `border-radius: 20px` in plain CSS; adjust per screen density as needed).
 
 ### Typography
-- **Primary font**: SN Pro — loaded from Google Fonts: https://fonts.google.com/specimen/SN+Pro
+- **Primary font**: Noto Sans — loaded from Google Fonts: https://fonts.google.com/noto/specimen/Noto+Sans
 - Apply via `@import` in global CSS or via `<link>` in `BaseLayout.astro`
 
 ### Color Palette
