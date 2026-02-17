@@ -120,20 +120,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       });
     }
 
-    // Set initial active based on hash or first section
-    const initial = location.hash.replace('#', '') || sections[0]?.id;
-    if (initial) setActive(initial);
+    function getActiveSection(): string {
+      const navHeight = (document.getElementById('tab-nav')?.offsetHeight ?? 56);
+      let activeId = sections[0]?.id ?? '';
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= navHeight + 8) {
+          activeId = section.id;
+        }
+      }
+      return activeId;
+    }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
-      { threshold: 0.4, rootMargin: '-60px 0px 0px 0px' }
-    );
-
-    sections.forEach((s) => observer.observe(s));
+    window.addEventListener('scroll', () => setActive(getActiveSection()), { passive: true });
+    setActive(getActiveSection());
   </script>
 
 </BaseLayout>
