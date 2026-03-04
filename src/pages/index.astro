@@ -251,6 +251,8 @@ const t = translations[lang];
     const tabLinks = document.querySelectorAll<HTMLAnchorElement>('.tab-link');
     const homeLink = document.getElementById('home-link');
 
+    const SCROLL_OFFSET = 40; // Must match additionalPadding in click handler
+
     function updateActiveTab() {
       const navHeight = (document.getElementById('tab-nav')?.offsetHeight ?? 56);
       const scrollPosition = window.scrollY;
@@ -263,10 +265,11 @@ const t = translations[lang];
       }
 
       // Otherwise, find the active section based on scroll position
+      // Use navHeight + SCROLL_OFFSET as threshold so clicked tabs activate immediately
       let activeId = '';
       for (const section of sections) {
         const rect = section.getBoundingClientRect();
-        if (rect.top <= navHeight + 8) {
+        if (rect.top <= navHeight + SCROLL_OFFSET) {
           activeId = section.id;
         }
       }
@@ -301,8 +304,7 @@ const t = translations[lang];
             const targetSection = document.getElementById(targetId);
             if (targetSection) {
               const navHeight = (document.getElementById('tab-nav')?.offsetHeight ?? 56);
-              const additionalPadding = 32; // Extra spacing between nav and section title
-              const targetPosition = targetSection.offsetTop - navHeight - additionalPadding;
+              const targetPosition = targetSection.offsetTop - navHeight - SCROLL_OFFSET;
               window.scrollTo({ top: targetPosition, behavior: 'smooth' });
             }
           }
