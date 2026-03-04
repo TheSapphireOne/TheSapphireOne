@@ -25,6 +25,11 @@ const t = translations[lang];
   <!-- Tab Navigation -->
   <nav id="tab-nav" class="sticky top-0 z-50 bg-bg-primary dark:bg-secondary border-b border-bg-secondary dark:border-primary/30 shadow-sm">
     <div class="max-w-5xl mx-auto px-6 flex">
+      <a href="#" id="home-link" class="tab-link px-4 py-4 text-base font-semibold border-b-2 transition-colors flex items-center" aria-label="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      </a>
       <a href="#projects" class="tab-link px-6 py-4 text-base font-semibold border-b-2 transition-colors" data-i18n="nav.projects">
         {t.nav.projects}
       </a>
@@ -244,26 +249,72 @@ const t = translations[lang];
   <script>
     const sections = document.querySelectorAll<HTMLElement>('section[id]');
     const tabLinks = document.querySelectorAll<HTMLAnchorElement>('.tab-link');
+    const homeLink = document.getElementById('home-link');
 
-    function setActive(id: string) {
-      tabLinks.forEach((link) => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-      });
-    }
-
-    function getActiveSection(): string {
+    function updateActiveTab() {
       const navHeight = (document.getElementById('tab-nav')?.offsetHeight ?? 56);
-      let activeId = sections[0]?.id ?? '';
+      const scrollPosition = window.scrollY;
+
+      // Check if we're at the top - if yes, only activate home
+      if (scrollPosition < 100) {
+        tabLinks.forEach((link) => link.classList.remove('active'));
+        homeLink?.classList.add('active');
+        return;
+      }
+
+      // Otherwise, find the active section based on scroll position
+      let activeId = '';
       for (const section of sections) {
-        if (section.getBoundingClientRect().top <= navHeight + 8) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= navHeight + 8) {
           activeId = section.id;
         }
       }
-      return activeId;
+
+      // Update active state for all tabs
+      tabLinks.forEach((link) => {
+        const href = link.getAttribute('href');
+        if (href === '#' && link === homeLink) {
+          link.classList.remove('active');
+        } else if (href === `#${activeId}`) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
     }
 
-    window.addEventListener('scroll', () => setActive(getActiveSection()), { passive: true });
-    setActive(getActiveSection());
+    // Home link - scroll to top
+    homeLink?.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Section links - smooth scroll and update active state
+    tabLinks.forEach((link) => {
+      if (link !== homeLink) {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+              const navHeight = (document.getElementById('tab-nav')?.offsetHeight ?? 56);
+              const additionalPadding = 32; // Extra spacing between nav and section title
+              const targetPosition = targetSection.offsetTop - navHeight - additionalPadding;
+              window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            }
+          }
+        });
+      }
+    });
+
+    // Update active tab on scroll
+    window.addEventListener('scroll', updateActiveTab, { passive: true });
+
+    // Set initial state
+    updateActiveTab();
   </script>
 
   <script is:inline define:vars={{ translations }}>
