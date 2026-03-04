@@ -18,6 +18,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <a href="#projects" class="tab-link px-6 py-4 text-base font-semibold border-b-2 transition-colors">
         Projects
       </a>
+      <a href="#my-projects" class="tab-link px-6 py-4 text-base font-semibold border-b-2 transition-colors">
+        My Projects
+      </a>
       <a href="#about" class="tab-link px-6 py-4 text-base font-semibold border-b-2 transition-colors">
         About Me
       </a>
@@ -74,21 +77,83 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
 
-        <!-- Project Card -->
+        <!-- Project Card: Frankly -->
         <div class="bg-bg-secondary dark:bg-primary/10 rounded-design p-6 border border-bg-secondary dark:border-primary/20 hover:shadow-lg transition-shadow">
-          <div class="flex items-start gap-4">
-            <div class="w-16 h-16 rounded-design bg-highlight/20 dark:bg-highlight/30 flex items-center justify-center shrink-0">
-              <span class="text-highlight text-2xl font-bold">B</span>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-secondary dark:text-bg-primary mb-1">App Name</h3>
-              <p class="text-secondary/70 dark:text-bg-primary/70 text-sm leading-relaxed">
-                Short description of this mobile application and what problem it solves.
+          <div class="flex flex-col sm:flex-row items-start gap-6">
+            <img src="/img/frankly.png" alt="Frankly App" class="w-[240px] h-auto object-contain shrink-0" />
+            <div class="flex flex-col gap-3">
+              <h3 class="text-xl font-semibold text-secondary dark:text-bg-primary">Frankly</h3>
+              <p class="text-secondary/75 dark:text-bg-primary/75 text-base leading-relaxed">
+                Frankly is a pillar 3a pension app that makes it easy to manage and control different types of investments yourself. Built with Kotlin Multiplatform, the small and clear app is very easy to use.
               </p>
+
+              <p class="text-secondary/75 dark:text-bg-primary/75 text-base leading-relaxed">
+                More information on the product <a href="https://www.frankly.ch/en/home.html" target="_blank" rel="noopener noreferrer" class="text-primary dark:text-highlight hover:underline">page</a>.
+              </p>
+
+              <!-- Store badges -->
+              <div class="mt-2">
+                <div class="flex flex-wrap gap-3 items-center">
+                  <a href="https://play.google.com/store/apps/details?id=ch.zkb.frankly" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/google-play-badge.png" alt="Get it on Google Play" class="h-12 w-auto" />
+                  </a>
+                  <a href="https://apps.apple.com/de/app/frankly-s%C3%A4ule-3a-vorsorge/id1498903386" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/apple_store.png" alt="Download on the App Store" class="h-12 w-auto" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <div class="mt-4 flex gap-2 flex-wrap">
-            <span class="text-xs px-3 py-1 rounded-full bg-highlight/10 dark:bg-highlight/20 text-highlight font-medium">iOS</span>
+            <a href="https://www.apple.com/ios" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">iOS</a>
+            <a href="https://www.android.com" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">Android</a>
+            <a href="https://kotlinlang.org/docs/multiplatform.html" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">Kotlin Multiplatform</a>
+            <a href="https://kotlinlang.org" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">Kotlin</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- My Projects Section -->
+    <section id="my-projects" class="scroll-mt-14 mb-20">
+      <h2 class="text-3xl font-bold text-secondary dark:text-bg-primary mb-8">My Projects</h2>
+      <div class="grid grid-cols-1 gap-6">
+
+        <!-- Project Card: Compendium -->
+        <div class="bg-bg-secondary dark:bg-primary/10 rounded-design p-6 border border-bg-secondary dark:border-primary/20 hover:shadow-lg transition-shadow">
+          <div class="flex flex-col sm:flex-row items-start gap-6">
+            <div class="w-[240px] h-[240px] rounded-design bg-primary/10 dark:bg-primary/20 flex items-center justify-center shrink-0">
+              <span class="text-primary dark:text-highlight text-8xl font-bold">C</span>
+            </div>
+            <div class="flex flex-col gap-3">
+              <h3 class="text-xl font-semibold text-secondary dark:text-bg-primary">Compendium</h3>
+              <p class="text-secondary/75 dark:text-bg-primary/75 text-base leading-relaxed">
+                The medical compendium app contains language based complete data set of medicinal products approved in Switzerland.
+              </p>
+              <p class="text-secondary/75 dark:text-bg-primary/75 text-base leading-relaxed">
+                The first full Kotlin App I made. Based on MVVM and Facade pattern it has an included Meta SQLite database. With Kotlin Coroutines this app optimizes its performance and the integrated bar code scan option gives the user easy product information access. Bookmarking you favourite products helps you to keep you products easy accessible.
+              </p>
+              <p class="text-secondary/75 dark:text-bg-primary/75 text-base leading-relaxed">
+                In cooperation with <a href="https://www.treeinspired.com/index.html" target="_blank" rel="noopener noreferrer" class="text-primary dark:text-highlight hover:underline">Treeinspired</a> this android app included many interesting challenges and technologies.
+              </p>
+
+              <!-- Store badges -->
+              <div class="mt-2">
+                <div class="flex flex-wrap gap-3 items-center">
+                  <a href="https://play.google.com/store/apps/details?id=com.treeinspired.android.kompendium" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/google-play-badge.png" alt="Get it on Google Play" class="h-12 w-auto" />
+                  </a>
+                  <a href="https://apps.apple.com/us/app/compendium-medication-guide/id373040910" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/apple_store.png" alt="Download on the App Store" class="h-12 w-auto" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 flex gap-2 flex-wrap">
+            <a href="https://www.android.com" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">Android</a>
+            <a href="https://kotlinlang.org" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">Kotlin</a>
           </div>
         </div>
 
