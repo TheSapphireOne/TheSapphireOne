@@ -23,3 +23,11 @@ pnpm-debug.log*
 
 # Claude Code settings
 .claude/
+
+# Astro
+.astro/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
