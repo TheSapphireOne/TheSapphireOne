@@ -7,8 +7,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- Banner with background image -->
   <header class="w-full h-[50vh] relative overflow-hidden flex items-end">
     <img src="/img/intro-bg.jpg" alt="Banner background" class="absolute inset-0 w-full h-full object-cover" />
+    <!-- Dark gradient overlay at bottom -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
     <div class="relative z-10 px-8 pb-8">
-      <h1 class="text-4xl md:text-6xl font-bold text-secondary dark:text-bg-primary drop-shadow-lg">Creativity with intelligent solutions</h1>
+      <h1 class="text-4xl md:text-6xl font-bold text-white">Creativity with intelligent solutions</h1>
     </div>
   </header>
 
