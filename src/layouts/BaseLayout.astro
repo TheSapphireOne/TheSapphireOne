@@ -31,6 +31,7 @@ const { title, description = "Welcome to domi.lu" } = Astro.props;
     <!-- Language toggle -->
     <div class="fixed top-2 right-[88px] z-[100] flex">
       <button
+        type="button"
         id="lang-de"
         aria-label="Switch to German"
         class="w-10 h-10 rounded-l-design flex items-center justify-center bg-bg-secondary dark:bg-primary/30 text-secondary dark:text-bg-primary hover:bg-primary/20 dark:hover:bg-primary/50 transition-colors font-semibold text-sm"
@@ -38,6 +39,7 @@ const { title, description = "Welcome to domi.lu" } = Astro.props;
         de
       </button>
       <button
+        type="button"
         id="lang-en"
         aria-label="Switch to English"
         class="w-10 h-10 rounded-r-design flex items-center justify-center bg-bg-secondary dark:bg-primary/30 text-secondary dark:text-bg-primary hover:bg-primary/20 dark:hover:bg-primary/50 transition-colors font-semibold text-sm"
@@ -75,19 +77,58 @@ const { title, description = "Welcome to domi.lu" } = Astro.props;
       const langDe = document.getElementById('lang-de');
       const langEn = document.getElementById('lang-en');
 
-      // Set initial active language (default to English)
-      langEn.classList.add('active-lang');
+      // Get current language from URL or localStorage
+      function getCurrentLanguage() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const langParam = urlParams.get('lang');
+        if (langParam === 'de' || langParam === 'en') {
+          return langParam;
+        }
+        const storedLang = localStorage.getItem('language');
+        return (storedLang === 'de' || storedLang === 'en') ? storedLang : 'en';
+      }
 
-      langDe.addEventListener('click', function () {
+      // Set language function
+      function setLanguage(lang) {
+        localStorage.setItem('language', lang);
+
+        // Update URL without reload using history API
+        const url = new URL(window.location.origin + window.location.pathname);
+        url.searchParams.set('lang', lang);
+        const hash = window.location.hash;
+        window.history.pushState({}, '', url.toString() + hash);
+
+        // Hot-swap the language content
+        if (window.updateLanguage) {
+          window.updateLanguage(lang);
+        }
+
+        // Update active button state
+        langDe.classList.toggle('active-lang', lang === 'de');
+        langEn.classList.toggle('active-lang', lang === 'en');
+      }
+
+      // Set initial active language
+      const currentLang = getCurrentLanguage();
+      if (currentLang === 'de') {
         langDe.classList.add('active-lang');
-        langEn.classList.remove('active-lang');
-        // TODO: Add language switching logic here
+      } else {
+        langEn.classList.add('active-lang');
+      }
+
+      // Language button handlers
+      langDe.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (getCurrentLanguage() !== 'de') {
+          setLanguage('de');
+        }
       });
 
-      langEn.addEventListener('click', function () {
-        langEn.classList.add('active-lang');
-        langDe.classList.remove('active-lang');
-        // TODO: Add language switching logic here
+      langEn.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (getCurrentLanguage() !== 'en') {
+          setLanguage('en');
+        }
       });
     </script>
 
