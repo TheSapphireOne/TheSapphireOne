@@ -123,9 +123,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Project Card: Compendium -->
         <div class="bg-bg-secondary dark:bg-primary/10 rounded-design p-6 border border-bg-secondary dark:border-primary/20 hover:shadow-lg transition-shadow">
           <div class="flex flex-col sm:flex-row items-start gap-6">
-            <div class="w-[240px] h-[240px] rounded-design bg-primary/10 dark:bg-primary/20 flex items-center justify-center shrink-0">
-              <span class="text-primary dark:text-highlight text-8xl font-bold">C</span>
-            </div>
+            <img src="/img/kompendium.png" alt="Compendium App" class="w-[240px] h-auto object-contain shrink-0" />
             <div class="flex flex-col gap-3">
               <h3 class="text-xl font-semibold text-secondary dark:text-bg-primary">Compendium</h3>
               <p class="text-secondary/75 dark:text-bg-primary/75 text-base leading-relaxed">
@@ -154,6 +152,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="mt-4 flex gap-2 flex-wrap">
             <a href="https://www.android.com" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">Android</a>
             <a href="https://kotlinlang.org" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">Kotlin</a>
+          </div>
+        </div>
+
+        <!-- Project Card: Gambly -->
+        <div class="bg-bg-secondary dark:bg-primary/10 rounded-design p-6 border border-bg-secondary dark:border-primary/20 hover:shadow-lg transition-shadow">
+          <div class="flex flex-col sm:flex-row items-start gap-6">
+            <img src="/img/gambly.png" alt="Gambly App" class="w-[240px] h-auto object-contain shrink-0" />
+            <div class="flex flex-col gap-3">
+              <h3 class="text-xl font-semibold text-secondary dark:text-bg-primary">Gambly</h3>
+              <p class="text-secondary/75 dark:text-bg-primary/75 text-base leading-relaxed">
+                Gambly is the oldest maintained app in my store and was created to keep track of our board and card game scores. First it just had a score board, where you could add or generate players with name and color. After I regularly played Magic the Gathering with my friends, a new score board was added. The one on one score board is especially useful in these kind of games.
+              </p>
+              <p class="text-secondary/75 dark:text-bg-primary/75 text-base leading-relaxed">
+                The app is quite simple but had some interesting new features to be implemented. Without ads flickering while playing, this app was reliable and comfortable to use.
+              </p>
+
+              <!-- Store badges -->
+              <div class="mt-2">
+                <div class="flex flex-wrap gap-3 items-center">
+                  <a href="https://play.google.com/store/apps/details?id=lu.domi.sapphire.gambly" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/google-play-badge.png" alt="Get it on Google Play" class="h-12 w-auto" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 flex gap-2 flex-wrap">
+            <a href="https://www.android.com" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">Android</a>
+            <a href="https://www.java.com" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">Java</a>
           </div>
         </div>
 

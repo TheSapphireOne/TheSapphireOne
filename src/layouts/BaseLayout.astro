@@ -28,6 +28,24 @@ const { title, description = "Welcome to domi.lu" } = Astro.props;
       }
     </script>
 
+    <!-- Language toggle -->
+    <div class="fixed top-2 right-[88px] z-[100] flex">
+      <button
+        id="lang-de"
+        aria-label="Switch to German"
+        class="w-10 h-10 rounded-l-design flex items-center justify-center bg-bg-secondary dark:bg-primary/30 text-secondary dark:text-bg-primary hover:bg-primary/20 dark:hover:bg-primary/50 transition-colors font-semibold text-sm"
+      >
+        de
+      </button>
+      <button
+        id="lang-en"
+        aria-label="Switch to English"
+        class="w-10 h-10 rounded-r-design flex items-center justify-center bg-bg-secondary dark:bg-primary/30 text-secondary dark:text-bg-primary hover:bg-primary/20 dark:hover:bg-primary/50 transition-colors font-semibold text-sm"
+      >
+        en
+      </button>
+    </div>
+
     <!-- Dark mode toggle -->
     <button
       id="theme-toggle"
@@ -52,7 +70,37 @@ const { title, description = "Welcome to domi.lu" } = Astro.props;
       document.getElementById('theme-toggle').addEventListener('click', function () {
         document.documentElement.classList.toggle('dark');
       });
+
+      // Language toggle
+      const langDe = document.getElementById('lang-de');
+      const langEn = document.getElementById('lang-en');
+
+      // Set initial active language (default to English)
+      langEn.classList.add('active-lang');
+
+      langDe.addEventListener('click', function () {
+        langDe.classList.add('active-lang');
+        langEn.classList.remove('active-lang');
+        // TODO: Add language switching logic here
+      });
+
+      langEn.addEventListener('click', function () {
+        langEn.classList.add('active-lang');
+        langDe.classList.remove('active-lang');
+        // TODO: Add language switching logic here
+      });
     </script>
+
+    <style is:global>
+      .active-lang {
+        background-color: rgb(0 111 186 / 0.2) !important;
+        color: #006FBA !important;
+      }
+      .dark .active-lang {
+        background-color: #00A4E4 !important;
+        color: #FFFFFF !important;
+      }
+    </style>
 
     <slot />
   </body>
