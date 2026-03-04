@@ -563,6 +563,40 @@ test.describe('Tablet Compatibility Tests', () => {
   });
 });
 
+test.describe('Footer Social Links Tests', () => {
+
+  test('should have LinkedIn link', async ({ page }) => {
+    await page.goto('/');
+    const link = page.locator('a[href*="linkedin.com/in/dominik"]');
+    await expect(link).toBeVisible();
+    expect(await link.getAttribute('target')).toBe('_blank');
+    expect(await link.getAttribute('rel')).toContain('noopener');
+  });
+
+  test('should have Stack Overflow link', async ({ page }) => {
+    await page.goto('/');
+    const link = page.locator('a[href*="stackoverflow.com/users/2033223"]');
+    await expect(link).toBeVisible();
+    expect(await link.getAttribute('target')).toBe('_blank');
+    expect(await link.getAttribute('rel')).toContain('noopener');
+  });
+
+  test('should have X / Twitter link', async ({ page }) => {
+    await page.goto('/');
+    const link = page.locator('a[href*="x.com/domilu_"]');
+    await expect(link).toBeVisible();
+    expect(await link.getAttribute('target')).toBe('_blank');
+    expect(await link.getAttribute('rel')).toContain('noopener');
+  });
+
+  test('should have footer with all three social links', async ({ page }) => {
+    await page.goto('/');
+    const footer = page.locator('footer');
+    await expect(footer).toBeVisible();
+    expect(await footer.locator('a').count()).toBe(3);
+  });
+});
+
 test.describe('Link Validation Tests', () => {
 
   test('should have all internal navigation links working', async ({ page }) => {
