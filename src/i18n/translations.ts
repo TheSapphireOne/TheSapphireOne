@@ -59,10 +59,10 @@ export const translations = {
     // About Me Section
     about: {
       title: "About Me",
-      paragraph1: "While trimming the sails on the sea or taking your next steps in climbing a wall, motivation and interest are driving factors to succeed in your journey to your goals. This is why it is important to have the right tools and people you can trust.",
-      paragraph2: "For me, software development is a constantly changing force of nature, ready to be conquered but always adapting. This is why the drive to learn new ways of completing tasks while also using the experience to improve and optimize workflow steps is important to me.",
-      paragraph3: "My main proficiency is Java and Kotlin in mobile and backend. I am experienced in multiplatform projects (Android/iOS), integrating or creating new micro services or connecting different technologies in an adaptive, maintainable and secure way.",
-      paragraph4: "My current personal focus is on Claude Code. By using it correctly it can be a valuable addition to my experience and skills.",
+      paragraph1: "When trimming the sails on the sea, motivation and interest are driving forces that safely guide you to your goals. This is why it is important to have the right tools and people you can trust.",
+      paragraph2: "For me, software development is a constantly evolving force of nature — ready to be conquered, yet always changing. This is why the drive to learn new ways of completing tasks while drawing on experience to improve and optimize workflows is an important part of how I work.",
+      paragraph3: "My main proficiency lies in Kotlin and Java in the mobile and backend domain. I have experience in multiplatform projects (Android/iOS), integrating or developing new microservices, and connecting different technologies in an adaptable, maintainable, and secure way.",
+      paragraph4: "My current personal focus is on AI-assisted development. Through targeted use, it can be a valuable addition to my experience and skills.",
     },
 
     // Store badges alt text
@@ -131,10 +131,10 @@ export const translations = {
     // About Me Section
     about: {
       title: "Über mich",
-      paragraph1: "Beim Trimmen der Segel auf dem Meer oder beim nächsten Schritt beim Klettern einer Wand sind Motivation und Interesse treibende Faktoren, um auf deinem Weg zu deinen Zielen erfolgreich zu sein. Deshalb ist es wichtig, die richtigen Werkzeuge und Menschen zu haben, denen du vertrauen kannst.",
-      paragraph2: "Für mich ist Softwareentwicklung eine sich ständig ändernde Naturgewalt, bereit erobert zu werden, aber immer anpassend. Deshalb ist der Antrieb, neue Wege zur Erledigung von Aufgaben zu lernen und gleichzeitig die Erfahrung zu nutzen, um Arbeitsschritte zu verbessern und zu optimieren, wichtig für mich.",
-      paragraph3: "Meine Hauptkompetenz liegt in Java und Kotlin im Mobile- und Backend-Bereich. Ich habe Erfahrung in Multiplatform-Projekten (Android/iOS), der Integration oder Erstellung neuer Microservices oder der Verbindung verschiedener Technologien auf adaptive, wartbare und sichere Weise.",
-      paragraph4: "Mein aktueller persönlicher Fokus liegt auf Claude Code. Durch die korrekte Verwendung kann es eine wertvolle Ergänzung zu meiner Erfahrung und meinen Fähigkeiten sein.",
+      paragraph1: "Beim Trimmen der Segel auf dem Meer sind Motivation und Interesse treibende Kräfte, die dich sicher zu deinen Zielen bringen. Deshalb ist es wichtig, die richtigen Werkzeuge und Menschen zu haben, denen du vertrauen kannst.",
+      paragraph2: "Für mich ist Softwareentwicklung eine sich ständig wandelnde Naturgewalt – bereit, erobert zu werden, und doch immer wieder im Wandel. Deshalb ist der Antrieb, neue Wege zur Erledigung von Aufgaben zu lernen und gleichzeitig auf Erfahrung zurückzugreifen, um Arbeitsschritte zu verbessern und zu optimieren, ein wichtiger Teil meiner Arbeitsweise.",
+      paragraph3: "Meine Hauptkompetenz liegt in Kotlin und Java im Mobile- und Backend-Bereich. Ich habe Erfahrung in Multiplatform-Projekten (Android/iOS), der Integration oder Entwicklung neuer Microservices sowie der Verknüpfung verschiedener Technologien auf eine anpassungsfähige, wartbare und sichere Art.",
+      paragraph4: "Mein aktueller persönlicher Fokus liegt auf der AI-unterstützten Entwicklung. Durch den gezielten Einsatz kann es eine wertvolle Ergänzung zu meiner Erfahrung und meinen Fähigkeiten sein.",
     },
 
     // Store badges alt text
