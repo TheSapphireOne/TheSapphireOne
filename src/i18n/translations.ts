@@ -40,6 +40,13 @@ export const translations = {
     myProjects: {
       title: "My Projects",
 
+      // Med Bill Scanner
+      medBillScanner: {
+        title: "Med Bill Scanner",
+        description1: "Med Bill Scanner reads Swiss medical bills and explains them. Using on-device text recognition, it extracts amounts, dates and tariff positions, then breaks down what your mandatory health insurance covers and what stays with you as deductible and co-payment.",
+        description2: "Built with Flutter for iOS and Android, it runs entirely on your device — your bills never leave the phone. It decodes TARMED, TARDOC, EAL and MiGeL tariff positions and links out to the official references.",
+      },
+
       // Compendium
       compendium: {
         title: "Compendium",
@@ -111,6 +118,13 @@ export const translations = {
     // My Projects Section
     myProjects: {
       title: "Meine Projekte",
+
+      // Med Bill Scanner
+      medBillScanner: {
+        title: "Med Bill Scanner",
+        description1: "Med Bill Scanner liest Schweizer Arztrechnungen und erklärt sie. Mit Texterkennung direkt auf dem Gerät extrahiert die App Beträge, Daten und Tarifpositionen und schlüsselt auf, was die obligatorische Krankenpflegeversicherung übernimmt und was als Franchise und Selbstbehalt bei dir bleibt.",
+        description2: "Entwickelt mit Flutter für iOS und Android, läuft sie vollständig auf deinem Gerät – deine Rechnungen verlassen das Telefon nie. Sie entschlüsselt TARMED-, TARDOC-, EAL- und MiGeL-Tarifpositionen und verlinkt auf die offiziellen Referenzen.",
+      },
 
       // Compendium
       compendium: {

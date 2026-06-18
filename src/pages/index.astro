@@ -135,6 +135,27 @@ const t = translations[lang];
       <h2 class="text-3xl font-bold text-secondary dark:text-bg-primary mb-8" data-i18n="myProjects.title">{t.myProjects.title}</h2>
       <div class="grid grid-cols-1 gap-6">
 
+        <!-- Project Card: Med Bill Scanner -->
+        <div class="bg-bg-secondary dark:bg-primary/10 rounded-design p-6 border border-bg-secondary dark:border-primary/20 hover:shadow-lg transition-shadow">
+          <div class="flex flex-col sm:flex-row items-start gap-6">
+            <img src="/img/medbillscanner.png" alt="Med Bill Scanner App" class="w-[240px] h-auto object-contain shrink-0" />
+            <div class="flex flex-col gap-3">
+              <h3 class="text-xl font-semibold text-secondary dark:text-bg-primary" data-i18n="myProjects.medBillScanner.title">{t.myProjects.medBillScanner.title}</h3>
+              <p class="text-secondary/75 dark:text-bg-primary/75 text-base leading-relaxed" data-i18n="myProjects.medBillScanner.description1">
+                {t.myProjects.medBillScanner.description1}
+              </p>
+              <p class="text-secondary/75 dark:text-bg-primary/75 text-base leading-relaxed" data-i18n="myProjects.medBillScanner.description2">
+                {t.myProjects.medBillScanner.description2}
+              </p>
+            </div>
+          </div>
+          <div class="mt-4 flex gap-2 flex-wrap">
+            <a href="https://www.android.com" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">Android</a>
+            <a href="https://www.apple.com/ios" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">iOS</a>
+            <a href="https://flutter.dev" target="_blank" rel="noopener noreferrer" class="text-xs px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-highlight font-medium hover:bg-primary/20 dark:hover:bg-primary/40 transition-colors">Flutter</a>
+          </div>
+        </div>
+
         <!-- Project Card: Compendium -->
         <div class="bg-bg-secondary dark:bg-primary/10 rounded-design p-6 border border-bg-secondary dark:border-primary/20 hover:shadow-lg transition-shadow">
           <div class="flex flex-col sm:flex-row items-start gap-6">
